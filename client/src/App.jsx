@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Countries from './components/Countries';
 import CountryData from './components/CountryData';
+import FavoriteCountries from './components/FavoriteCountries';
 
 function App() {
     
@@ -12,6 +13,7 @@ function App() {
     const [listOrder, setListOrder] = useState(0);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [filterByName, setFilterByName] = useState([]);
+    const [showFavorites, setShowFavorites] = useState(false);
 
     // Make API request with useEffect:
     useEffect(() => {
@@ -51,8 +53,8 @@ function App() {
         // Call function to fetch from API:
         fetchData(allCountriesUrl);
 
-    }, [listOrder, filterByName]);    // Empty dependency array ensures that this effect runs only once
-                        // for the A-Z buttons we had to add "listOrder" state to the dependencies array, so it reloads after it is changed
+    }, [listOrder, filterByName]);      // Empty dependency array ensures that this effect runs only once
+                                        // for the A-Z buttons we had to add "listOrder" state to the dependencies array, so it reloads after it is changed
 
     if (loading) {
         return <div>Loading...</div>;
@@ -91,10 +93,21 @@ function App() {
                     <button onClick={() => setListOrder(1)}>Sort by Name (A-Z)</button>
                     <button onClick={() => setListOrder(2)}>Sort by Name (Z-A)</button>
                     <input onInput={handleInput} placeholder='Search by name'></input>
+                    <button onClick={() => {
+                        setShowFavorites(true)
+                        // Add another condition to not display all countries (there is now useState for this at the moment!)
+                        }}>
+                        Show Favorite Countries
+                    </button>
                 </nav>
                 )
             }
             <h1>{selectedCountry ? "Country Details" : "List of Countries:"}</h1>
+            {showFavorites ? (
+                <FavoriteCountries />
+            ) : (
+                null
+            )}
             {selectedCountry ? (
                 <CountryData countryData={selectedCountry} />
             ) : (

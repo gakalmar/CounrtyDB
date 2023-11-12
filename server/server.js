@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false })); // Required for tasks other th
 app.use('/client', express.static(path.join(__dirname, '../client')));
 app.use(cors()); // Add this line to enable CORS (npm i cors!)
 
-// Static Page Requests:
+// Initial task:
 app.get('/welcome', (req, res) => {
     res.send("Welcome!");
 })
@@ -22,7 +22,7 @@ app.get('/welcome', (req, res) => {
 // API Endpoint to Get Favorite Countries
 app.get('/api/favoriteCountries', async (req, res) => {
     try {
-        const favoriteCountriesData = await fs.readFile('./server/data/favoriteCountries.json', 'utf-8');
+        const favoriteCountriesData = await fs.readFile('./data/favoriteCountries.json', 'utf-8');
         const favoriteCountries = JSON.parse(favoriteCountriesData);
         res.json(favoriteCountries);
     } catch (error) {
@@ -31,7 +31,7 @@ app.get('/api/favoriteCountries', async (req, res) => {
     }
 });
 
-// APIs:
+// API Endpoint to add Favorite Countries:
 app.post('/api/favoriteCountries', async (req, res) => {
     try {
         
