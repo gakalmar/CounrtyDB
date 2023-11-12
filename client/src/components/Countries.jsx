@@ -3,7 +3,6 @@ function Countries(props) {
 
     const handleAddFavorite = async () => {
         try {
-
             const response = await fetch('http://localhost:3000/api/favoriteCountries', {
                 method: 'POST',
                 headers: {
