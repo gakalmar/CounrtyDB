@@ -105,6 +105,7 @@ function App() {
                             index={index}
                             name={country.name.common}
                             countryData={{
+                                name: country.name.common ? country.name.common : "n/a",
                                 cca3: country.cca3 ? country.cca3 : "n/a",
                                 capital: (country.capital && country.capital[0]) ? country.capital[0] : "n/a",
                                 region: country.region ? country.region : "n/a",
