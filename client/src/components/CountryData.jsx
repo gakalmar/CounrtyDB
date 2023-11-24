@@ -16,7 +16,6 @@ function CountryData (props) {
                     <li>Population: {countryData.population}</li>
                     <li>Timezone: {countryData.timezone}</li>
                     <li>Translation: {countryData.translation}</li>
-                    <li></li>
                 </ul>
         </div>
     )

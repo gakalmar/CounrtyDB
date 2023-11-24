@@ -36,6 +36,10 @@ h1 {
   line-height: 1.1;
 }
 
+.plussign{
+    cursor: pointer;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -51,6 +55,7 @@ button {
 }
 button:hover {
   border-color: #646cff;
+  cursor: pointer;
 }
 button:focus,
 button:focus-visible {

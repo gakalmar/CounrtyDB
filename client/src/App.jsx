@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import { useNavigate } from 'react-router-dom';
 import Countries from './components/Countries';
 import CountryData from './components/CountryData';
 import FavoriteCountries from './components/FavoriteCountries';
 
 function App() {
     
+    const navigate = useNavigate();
+
     // Create states to store fetched data (and handle errors and loading):
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -93,10 +95,7 @@ function App() {
                     <button onClick={() => setListOrder(1)}>Sort by Name (A-Z)</button>
                     <button onClick={() => setListOrder(2)}>Sort by Name (Z-A)</button>
                     <input onInput={handleInput} placeholder='Search by name'></input>
-                    <button onClick={() => {
-                        setShowFavorites(true)
-                        // Add another condition to not display all countries (there is now useState for this at the moment!)
-                        }}>
+                    <button onClick={() => navigate('/favCountries')}>
                         Show Favorite Countries
                     </button>
                 </nav>

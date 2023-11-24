@@ -55,7 +55,7 @@ function Countries(props) {
         <div key={index}>
             <h2>
                 {name}
-                <span onClick={handleAddFavorite}>{isFavorite ? " -" : " +"}</span></h2>
+                <span onClick={handleAddFavorite} class="plussign">{isFavorite ? " -" : " +"}</span></h2>
             <button type="button" onClick={() => setSelectedCountry(countryData)}>
                 More details
             </button>
