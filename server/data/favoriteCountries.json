@@ -1,2 +1,62 @@
 [
+  {
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "region": "Americas",
+    "subregion": "South America",
+    "continents": [
+      "South America"
+    ],
+    "area": 2780400,
+    "population": 45376763,
+    "flag": "https://flagcdn.com/w320/ar.png"
+  },
+  {
+    "name": "Nigeria",
+    "capital": "Abuja",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "continents": [
+      "Africa"
+    ],
+    "area": 923768,
+    "population": 206139587,
+    "flag": "https://flagcdn.com/w320/ng.png"
+  },
+  {
+    "name": "Western Sahara",
+    "capital": "El Aaiún",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "continents": [
+      "Africa"
+    ],
+    "area": 266000,
+    "population": 510713,
+    "flag": "https://flagcdn.com/w320/eh.png"
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "capital": "Cockburn Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "continents": [
+      "North America"
+    ],
+    "area": 948,
+    "population": 38718,
+    "flag": "https://flagcdn.com/w320/tc.png"
+  },
+  {
+    "name": "Taiwan",
+    "capital": "Taipei",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "continents": [
+      "Asia"
+    ],
+    "area": 36193,
+    "population": 23503349,
+    "flag": "https://flagcdn.com/w320/tw.png"
+  }
 ]

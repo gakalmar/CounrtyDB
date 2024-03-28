@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Countries from './components/Countries';
 import CountryData from './components/CountryData';
 import FavoriteCountries from './components/FavoriteCountries';
+import './App.css'
 
 function App() {
     
